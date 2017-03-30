@@ -1,0 +1,27 @@
+{
+  "title": "更简便的会议进度管理系统",
+  "description": "快速安排活动计划，管理计划进度",
+  "image": "/resource/MacBook Mockup2.png",
+  "children": [
+    {
+      "title": "活动目标管理",
+      "description": "通过活动目标管理功能，用户可以用数据支持年度安排和计划，以活动目标为导向随时进行优化调整。",
+      "image": "/resource/product1.png"
+    },
+    {
+      "title": "流程设计管理",
+      "description": "通过标准化活动流程并在每次活动前进行微调，减少活动管理成本，提高单次活动的效率。",
+      "image": "/resource/product2.png"
+    },
+    {
+      "title": "实时数据收集和管理",
+      "description": "通过系统规范数据收集，减少数据流失，提高数据质量并利用数据获得更多机会",
+      "image": "/resource/product3.png"
+    },
+    {
+      "title": "活动进度总结和分析",
+      "description": "执行过程中的数据形成表格，实时与进度目标对比，为管理者提供友好的界面实时掌握活动准备情况",
+      "image": "/resource/product4.png"
+    }
+  ]
+}
