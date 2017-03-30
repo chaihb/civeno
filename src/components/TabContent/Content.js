@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import Grid from 'react-bootstrap/lib/Grid';
 
 function getText(text) {
   if (_.isArray(text)) {
@@ -10,6 +11,6 @@ function getText(text) {
 
 export default function({ text }) {
   return (
-    <div>{getText(text)}</div>
+    <Grid>{getText(text)}</Grid>
   );
 }

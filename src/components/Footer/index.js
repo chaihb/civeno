@@ -22,11 +22,10 @@ const style = {
   subjectText: {
     fontSize: '14px',
     color: 'rgb(119, 126, 128)',
-    margin: '10px 0px',
   },
 };
 
-const colStyle = {
+const colProps = {
   outer: {
     xs: 12,
     sm: 3,
@@ -34,6 +33,9 @@ const colStyle = {
   inner: {
     xs: 6,
     sm: 12,
+    style: {
+      marginBottom: '7px',
+    }
   }
 };
 
@@ -67,6 +69,7 @@ const footer = [
     children: [
       {
         text: '邮箱地址：hr@civeno.com',
+        email: 'hr@civeno.com',
       }
     ]
   }
@@ -76,21 +79,16 @@ export default function() {
   return (
     <Row style={style.row}>
       <Grid style={style.grid}>
-        <Col {...colStyle.outer} style={{ textAlign: 'center' }}>
-          <img src="/resource/logo_GR.png" style={{ width: '50%', maxWidth: '250px' }}/>
+        <Col {...colProps.outer} style={{ textAlign: 'center' }} xsHidden>
+          <Logo />
         </Col>
         {footer.map((subject, subjectIndex) => (
-          <Col {...colStyle.outer} key={`footer_${subjectIndex}`}>
+          <Col {...colProps.outer} key={`footer_${subjectIndex}`} style={{ margin: '15px 0px' }}>
             <Row><Col xs={12} style={style.subjectTitle}>{subject.title}</Col></Row>
             <Row>
               {subject.children.map((item, itemIndex) => (
-                <Col {...colStyle.inner} key={`footer_${subjectIndex}_item_${itemIndex}`}>
-                  {
-                    item.to ?
-                      <Link style={style.subjectText} to={item.to} onClick={scrollToHeader}>{item.text}</Link>
-                      :
-                      <a style={style.subjectText}>{item.text}</a>
-                  }
+                <Col {...colProps.inner} key={`footer_${subjectIndex}_item_${itemIndex}`}>
+                  <CustomLink item={item}/>
                 </Col>
               ))}
             </Row>
@@ -103,4 +101,37 @@ export default function() {
 
 function scrollToHeader() {
   window.scrollTo(0, 0);
+}
+
+function CustomLink({ item }) {
+  if (item.to) {
+    return <Link style={style.subjectText} to={item.to} onClick={scrollToHeader}>{item.text}</Link>;
+  }
+  if (item.email) {
+    return <a style={style.subjectText} href={`mailto:${item.email}`}>{item.text}</a>;
+  }
+  return <a style={style.subjectText}>{item.text}</a>;
+}
+
+function Logo() {
+  const props = {
+    src: "/resource/logo_GR.png",
+    style: { width: '50%', maxWidth: '250px' },
+  };
+  const smStyle = { ...props.style, marginTop: '20px' };
+  const mdStyle = { ...props.style, marginTop: '12px' };
+  return (
+    <div xsHidden>
+      <Col smHidden mdHidden>
+        <img {...props}/>
+      </Col>
+      <Col smHidden lgHidden>
+        <img {...props} style={mdStyle}/>
+      </Col>
+      <Col mdHidden lgHidden>
+        <img {...props} style={smStyle}/>
+      </Col>
+    </div>
+  )
+  return <img {...props}/>
 }

@@ -13,11 +13,13 @@ class App extends Component {
     return (
       <div>
         <TextContentWithBackground {...constant.titleContent} />
-        <TextContent title={constant.projectManger.title} description={constant.projectManger.description}/>
-        <ImageTextContainer data={constant.projectManger.children}/>
-        <ImageTextHorizontal {...constant.MeetManger}/>
-        <TextContent {...constant.MeetType}/>
         <PageContent>
+          <TextContent title={constant.projectManger.title} description={constant.projectManger.description}/>
+          <ImageTextContainer data={constant.projectManger.children}/>
+        </PageContent>
+        <ImageTextHorizontal {...constant.MeetManger}/>
+        <PageContent>
+          <TextContent {...constant.MeetType}/>
           <Row>
             {constant.MeetType.children.map(
               (data, index) => <TextWithImageBackground key={`meet_type_children_${index}`} {...data} />

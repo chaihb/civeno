@@ -1,21 +1,10 @@
 import React from 'react';
-import NavItem from 'react-bootstrap/lib/Nav';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-const CustomNavItem = styled(NavItem)`
-  padding: 15px 5px;
-  color: #222;
-  text-decoration: none;
-  
-  &:hover{
-    color: blue;
-    text-decoration: none;
-  }
-`;
-
 const CustomLink = styled(Link)`
-  padding: 15px 5px;
+  padding: 10px 5px;
+  display: block;
   color: #222;
   text-decoration: none !important;
   margin-left: 20px !important;

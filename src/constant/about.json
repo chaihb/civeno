@@ -1,5 +1,5 @@
 {
-  "image":"/resource/about2.png",
+  "image":"./resource/about2.png",
   "children": [
     {
       "title": "公司概况",

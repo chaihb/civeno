@@ -1,8 +1,11 @@
 import React from 'react';
-import PageContent from '../PageContent';
 import Row from 'react-bootstrap/lib/Row';
+import Grid from 'react-bootstrap/lib/Grid';
 
 const style = {
+  grid: {
+    marginBottom: '20px',
+  },
   row: {
     textAlign: 'center',
   },
@@ -10,11 +13,11 @@ const style = {
 
 export default function({ title = 'Title', description = '' }) {
   return (
-    <PageContent>
+    <Grid style={style.grid}>
       <Row style={style.row}>
         <p className="title">{title}</p>
         <p className="description">{description}</p>
       </Row>
-    </PageContent>
+    </Grid>
   );
 }

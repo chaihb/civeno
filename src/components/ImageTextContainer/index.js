@@ -5,7 +5,7 @@ import ImageTextContent from '../ImageTextContent';
 
 const style = {
   col: {
-    height: '300px',
+    height: '350px',
   },
 };
 

@@ -6,11 +6,11 @@ import Col from 'react-bootstrap/lib/Col';
 const style = {
   outer: {
     marginTop: '20px',
-    padding: '20px 0px',
+    padding: '10px 0px',
     backgroundColor: '#ebf1f2',
   },
   content: {
-    marginTop: '50px',
+    marginTop: '20px',
   },
 };
 
@@ -19,10 +19,10 @@ export default function({ title = 'title', description = '', image = '' }) {
     <div style={style.outer}>
       <PageContent style={style.content}>
         <Row>
-          <Col xs={12} sm={6}>
+          <Col xs={12} sm={6} style={{ textAlign: 'center' }}>
             <img src={image} style={{ width: '60%' }}/>
           </Col>
-          <Col xs={12} sm={6}>
+          <Col xs={12} sm={6} style={{ marginTop: '20px' }}>
             <p className="title">{title}</p>
             <p>{description}</p>
           </Col>

@@ -2,7 +2,7 @@
   "titleContent": {
     "title": "会议其实很简单",
     "description": "让企业飞的更高，从最有效的会议开始",
-    "image": "/resource/1.png"
+    "image": "./resource/1.png"
   },
   "projectManger": {
     "title": "管理您的项目",
@@ -11,57 +11,58 @@
       {
         "title": "全面的活动管理",
         "description": "降低繁琐的筹备，提高管理效率，快速有序的完成活动",
-        "image": "/resource/project1.png"
+        "image": "./resource/project1.png"
       },
       {
         "title": "实时的沟通记录",
         "description": "实时更新沟通记录与执行状态，减少邮件确认和查找",
-        "image": "/resource/project2.png"
+        "image": "./resource/project2.png"
       },
       {
         "title": "简便的活动流程管理",
         "description": "规范活动流程，根据时间节点高效有序自动安排任务",
-        "image": "/resource/project3.png"
+        "image": "./resource/project3.png"
       },
       {
         "title": "基于流程的文件共享",
         "description": "加强成员之间配合，减少任务拖沓，快速定位查找历史文件",
-        "image": "/resource/project4.png"
+        "image": "./resource/project4.png"
       },
       {
         "title": "活动进度统计表",
         "description": "项目进度可视化，精准掌握每个人每个任务的进度",
-        "image": "/resource/project5.png"
+        "image": "./resource/project5.png"
       },
       {
-        "title": "更多内容请查看详细解释",
-        "image": "/resource/project6.png"
+        "title": "查看更多",
+        "image": "./resource/project6.png",
+        "to": "/product"
       }
     ]
   },
   "MeetManger": {
     "title": "全面的会议管理方案",
     "description": "会米系统提供：后台系统、会议规划、云端部署简化会议活动，支持从桌面到移动设备。我们提供整套SaaS解决方案，全面帮助企业客户在线制定计划，记录项目进展，随时进行项目追踪，全面的项目汇报。",
-    "image": "/resource/apple1.png"
+    "image": "./resource/apple1.png"
   },
   "MeetType": {
     "title": "我们涉及的会议类型",
     "children": [
       {
         "title": "商务型会议",
-        "image": "/resource/meet1.jpg"
+        "image": "./resource/meet1.jpg"
       },
       {
         "title": "展销会以",
-        "image": "/resource/meet2.jpg"
+        "image": "./resource/meet2.jpg"
       },
       {
         "title": "专业学术会议",
-        "image": "/resource/meet3.jpg"
+        "image": "./resource/meet3.jpg"
       },
       {
         "title": "在线会议",
-        "image": "/resource/meet4.jpg"
+        "image": "./resource/meet4.jpg"
       }
     ]
   }
